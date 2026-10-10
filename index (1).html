@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8e2e7">
+<title>For My Beautiful Kukudu ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+:root{--wine:#71384c;--rose:#bd6682;--cream:#fffaf6}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;background:linear-gradient(140deg,#f9e5e7,#f6d6df,#fcebe5);color:var(--wine);font-family:'DM Sans',sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:23px 23px}
+.screen{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative}
+.card{width:min(100%,470px);background:rgba(255,250,246,.91);border:1px solid rgba(255,255,255,.95);border-radius:28px;padding:42px 24px;text-align:center;box-shadow:0 25px 80px #9c53621b;backdrop-filter:blur(16px)}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:10px;color:#b27688}
+h1{font:500 clamp(34px,8vw,46px)/1.18 'Playfair Display',serif;margin:18px 0;color:#673548}
+h1 em{font-weight:500;color:#c36e89}
+.subtitle{font-size:13px;color:#a47b84;line-height:1.8}
+.mascot{font-size:65px;margin:24px 0 20px;animation:float 3s ease-in-out infinite}
+.buttons{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin-top:28px;min-height:55px}
+button{font:500 14px 'DM Sans',sans-serif;border:0;cursor:pointer;touch-action:manipulation;transition:transform .3s ease,box-shadow .3s ease}
+#yes{background:#bd6682;color:white;border-radius:40px;padding:15px 32px;box-shadow:0 7px 20px #bd668238;transform-origin:center}
+#no{background:#fff;color:#94576a;border:1px solid #f0d6df;border-radius:40px;padding:14px 30px;transform-origin:center}
+button:focus-visible{outline:3px solid #b66a84;outline-offset:4px}
+.tiny-note{font-size:11px;color:#bc929d;margin-top:27px}
+.hidden{display:none!important}
+#birthday{animation:appear 1s ease both;align-items:flex-start;padding-top:40px;padding-bottom:50px}
+.birthday-card{padding-top:35px;padding-bottom:35px}
+.big-number{font:500 100px/.95 'Playfair Display',serif;color:#cb8296;text-shadow:0 8px 40px #dca0b350;margin:24px 0 10px}
+.cake{font-size:64px;margin:18px 0;animation:float 3s infinite}
+.child-photo{display:block;width:min(100%,245px);max-height:340px;object-fit:cover;object-position:center;border-radius:18px;border:5px solid white;box-shadow:0 12px 35px #9c536222;margin:24px auto 12px}
+.photo-caption{font:italic 18px 'Playfair Display',serif;color:#a65f78;line-height:1.5;margin:12px 0 25px}
+#letterButton{background:#fff0f3;border:1px solid #f0d2dc;color:#9d526d;border-radius:40px;padding:14px 22px;margin-top:10px}
+.message{background:#fff4f4;border:1px solid #f4dfe3;border-radius:18px;padding:22px;margin-top:22px;font-size:13px;line-height:1.9;color:#805966;text-align:left;white-space:normal}
+.message h2{font:italic 25px 'Playfair Display',serif;text-align:center;color:#9d526d;margin:8px 0 16px}
+.message h3{font:italic 21px 'Playfair Display',serif;text-align:center;color:#9d526d;margin:25px 0 12px}
+.message p{margin:0 0 14px}
+.message ol{padding-left:22px}
+.message li{padding-left:3px;margin-bottom:7px}
+.signature{font:italic 23px 'Playfair Display',serif;color:#b86d84;text-align:center;margin-top:22px}
+.sparkle{color:#d69a77;font-size:18px;letter-spacing:10px}
+.heart{position:fixed;bottom:-30px;pointer-events:none;z-index:4;animation:rise 5s linear forwards}
+@keyframes float{50%{transform:translateY(-9px) rotate(2deg)}}
+@keyframes appear{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes rise{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+@media(max-width:400px){.card{padding:32px 19px;border-radius:23px}.big-number{font-size:85px}.message{padding:17px;font-size:12.5px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main class="screen" id="question">
+ <section class="card">
+  <div class="eyebrow">a little question for you</div>
+  <h1>Do you love <em>me?</em></h1>
+  <p class="subtitle">Be honest... my heart is waiting ♡</p>
+  <div class="mascot" aria-hidden="true">🧸</div>
+  <div class="buttons">
+   <button id="yes">Yes, of course ♡</button>
+   <button id="no">No 🙈</button>
+  </div>
+  <p class="tiny-note">made with a little too much love</p>
+ </section>
+</main>
+
+<main class="screen hidden" id="birthday">
+ <section class="card birthday-card">
+  <div class="sparkle">✧ · ˚ ✧</div>
+  <div class="eyebrow">today is all about you</div>
+  <h1>Happy Birthday,<br><em>my beautiful Kukudu.</em></h1>
+  <div class="big-number">18</div>
+  <p class="subtitle">eighteen looks like a beautiful beginning ♡</p>
+  <div class="cake" aria-hidden="true">🎂</div>
+  <img class="child-photo" src="kukudu-childhood.png" alt="Kukudu's childhood photo">
+  <p class="photo-caption">Look at my little Kukudu… and look at the beautiful girl she has become. ♡</p>
+  <button id="letterButton" aria-expanded="false">A little letter for you ✉</button>
+  <article id="letter" class="message hidden">
+   <h2>To my beautiful Kukudu ♡</h2>
+   <p>Happy 18th Birthday, my love! ❤️✨</p>
+   <p>Just look at your childhood picture. You were so cute back then, and honestly, you are still the cutest and most beautiful girl in my eyes. 🥹💗</p>
+   <p>You have no idea how much I love your cuteness, your beauty, your smile, and every little thing about you. You are so special to me that sometimes I cannot even find the right words to explain what I feel for you.</p>
+   <p>I still remember Navratri, when I first noticed that girl who looked so different from everyone else. There was something special about you, something that caught my attention in a way I cannot explain. I wanted to meet you, see you, and know you better. And look at me now, falling for you more and more every day. ❤️</p>
+   <p>Dev loves being crazy about you. Dev loves doing even the smallest things that can bring a smile to your face. Whether it is something big or something tiny, if it makes you happy, it means something to me. Seeing you smile is one of my favourite feelings in this world.</p>
+   <p>And today, on the 10th, your birthday, I did something special for you. I ran <strong>10 kilometres without taking a single break</strong>, and I did it only for you. ❤️🏃🏻‍♂️</p>
+   <p>And honestly, I feel that even this was possible because of you. You became my motivation, my reason to push myself, and the thought that kept me going. Every step felt more meaningful because I was doing it for someone as special as you.</p>
+   <h3>23 little reasons why you are so special to me 💌</h3>
+   <ol>
+    <li>Your smile can make even my most ordinary day feel beautiful.</li>
+    <li>Your happiness means more to me than you probably realise.</li>
+    <li>I love the way your smallest actions can make me smile.</li>
+    <li>I love seeing your name appear on my phone.</li>
+    <li>Talking to you is one of my favourite parts of the day.</li>
+    <li>I love how you can make me feel better without even trying.</li>
+    <li>I love your cute little expressions.</li>
+    <li>I love the way you make ordinary moments feel special.</li>
+    <li>I love learning new things about you.</li>
+    <li>I love every memory we create together.</li>
+    <li>I love making little efforts just to see you smile.</li>
+    <li>I love how one message from you can change my mood.</li>
+    <li>I love listening to you talk about the things you enjoy.</li>
+    <li>I love how even the smallest moments with you become memorable.</li>
+    <li>I love the excitement I feel when I know I am going to see you.</li>
+    <li>I love making you feel appreciated in little ways.</li>
+    <li>I love cheering you up whenever you have a difficult day.</li>
+    <li>I love celebrating your achievements and seeing you grow.</li>
+    <li>I love that I can keep discovering new things to admire about you.</li>
+    <li>I love imagining all the beautiful memories we could make in the future.</li>
+    <li>I love that you inspire me to become a better version of myself.</li>
+    <li>I love having someone as special as you in my life.</li>
+    <li>Most importantly, I love you for being YOU—not because you have to be perfect, but because there is only one you, and you are incredibly special to me. ♡</li>
+   </ol>
+   <h3>A little promise from my heart 🌷</h3>
+   <p>My beautiful Kukudu, I cannot promise that every day will be perfect, but I want to keep making efforts to bring happiness into your life. I want to celebrate your little achievements, listen when you need someone, support your dreams, and remind you how precious you are.</p>
+   <p>I want to create memories with you that we can look back on someday and smile about. I want to make you laugh over the silliest things, surprise you with little gestures, and give you reasons to smile even on ordinary days.</p>
+   <p>You deserve kindness, happiness, respect, and a love that makes you feel valued. And I hope that, in my own little ways, I can keep making you feel all of those things.</p>
+   <p>Today, you turn 18, and I hope this new chapter brings you beautiful opportunities, peaceful days, exciting adventures, and countless reasons to smile. May all your dreams come closer to reality, and may you always keep that beautiful spark inside you alive.</p>
+   <p>Thank you for being the girl who made me notice her during Navratri, the girl I wanted to meet and see, and the girl for whom even a 10 km run could become something meaningful.</p>
+   <p>You have become such a beautiful part of my thoughts, my happiness, and my memories. And if there is one thing I want you to remember today, it is this: <strong>you are loved, you are appreciated, and you are much more special to me than words can ever fully explain.</strong> ❤️</p>
+   <p>And one last thing, madam grammar corrector 😂❤️ — please check my grammar today with a little extra love, because this letter comes straight from my heart, even if my English sometimes needs your help!</p>
+   <p><strong>Happy 18th Birthday once again, my beautiful Kukudu! 🎂🌷</strong></p>
+   <p>Keep smiling, keep shining, and keep being the adorable girl you are.</p>
+   <p>I hope your birthday is as beautiful as your smile and as special as you are to me.</p>
+   <div class="signature">Your Dev ♡</div>
+   <p style="text-align:center;margin-top:10px"><em>Forever grateful that our paths crossed. ❤️</em></p>
+  </article>
+  <p class="tiny-note">you make ordinary days feel magical</p>
+ </section>
+</main>
+
+<script>
+const yes=document.getElementById('yes');
+const no=document.getElementById('no');
+const question=document.getElementById('question');
+const birthday=document.getElementById('birthday');
+let taps=0;
+no.addEventListener('click',()=>{
+ taps++;
+ const yesScale=Math.min(1+taps*.19,2.8);
+ const noScale=Math.max(1-taps*.13,.35);
+ yes.style.transform=`scale(${yesScale})`;
+ no.style.transform=`scale(${noScale})`;
+ no.style.opacity=String(Math.max(1-taps*.10,.45));
+ if(taps>=7) no.textContent='okay okay 😭';
+});
+yes.addEventListener('click',()=>{
+ question.classList.add('hidden');
+ birthday.classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+ for(let i=0;i<28;i++)setTimeout(makeHeart,i*100);
+});
+const letterButton=document.getElementById('letterButton');
+const letter=document.getElementById('letter');
+letterButton.addEventListener('click',()=>{
+ const opening=letter.classList.contains('hidden');
+ letter.classList.toggle('hidden');
+ letterButton.setAttribute('aria-expanded',String(opening));
+ letterButton.textContent=opening?'Close my letter ♡':'A little letter for you ✉';
+ if(opening)setTimeout(()=>letter.scrollIntoView({behavior:'smooth',block:'start'}),100);
+});
+function makeHeart(){
+ const heart=document.createElement('span');
+ heart.className='heart';
+ heart.textContent=['♡','♥','✧','💕'][Math.floor(Math.random()*4)];
+ heart.style.left=Math.random()*100+'vw';
+ heart.style.fontSize=(14+Math.random()*18)+'px';
+ heart.style.color=['#c36e89','#df9aab','#b77c90'][Math.floor(Math.random()*3)];
+ heart.style.animationDuration=(3+Math.random()*4)+'s';
+ document.body.appendChild(heart);
+ setTimeout(()=>heart.remove(),7500);
+}
+</script>
+</body>
+</html>
